@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;800&display=swap%27');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
@@ -67,11 +67,11 @@ a:hover {
     color: var(--LightBlue);
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(280deg, rgba(29,29,29,0.6) 25%, rgba(7,71,125,0.8) 100%);
+    background: linear-gradient(280deg, rgba(29, 29, 29, 0.6) 25%, rgba(7, 71, 125, 0.8) 100%);
     height: 100px;
     color: var(--White);
     border-bottom: 5px solid var(--Blue);
@@ -80,7 +80,7 @@ header{
     align-items: center;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -89,14 +89,14 @@ nav{
     gap: 5rem;
 }
 
-nav > ul{
+nav>ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 4rem;
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -130,7 +130,7 @@ footer {
     color: var(--White);
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 40, 130, 0.8)), url("Assts/Background3.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("Assts/Background3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -157,7 +157,7 @@ footer {
 
 
 @media only screen and (max-width: 1024px) {
-    #heroContainer{
+    #heroContainer {
         flex-direction: column;
     }
-  }
+}
