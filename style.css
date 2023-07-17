@@ -115,13 +115,12 @@ nav>ul {
 
 #logos {
     display: flex;
-    gap: 5rem;
     flex-direction: column;
-    width: 100%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-
+    gap: 5rem;
+    width: 100%;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -129,17 +128,21 @@ nav>ul {
 
 #logoCards {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
-}
+    width: 80%;
+    max-width: 1000px; /* Added max-width to limit the container width */
+    margin: 0 auto; /* Added auto margin to center the container */
+  }
 
-#logos img {
-    border: 0.1rem solid var(--White);
-    height: 200px;
-    width: auto;
-}
+#logoCards img {
+    /* border: 0.1rem solid var(--White); */
+    width: calc(20% - 0.4rem); /* Adjusted width to occupy 20% of the container */
+    height: auto;
+  }
+  
 
 #banners {
     padding: 5rem 0;
@@ -151,25 +154,48 @@ nav>ul {
     justify-content: center;
     align-items: center;
 
-    background-image: linear-gradient(rgba(0, 40, 130, 0.8), rgba(0, 0, 0, 0.5)), url("./Assts/Background5.jpg");
+    background-image: linear-gradient(rgba(0, 40, 130, 0.8), rgba(0, 0, 0, 0.5)), url("./Assts/background4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tbanners {
+    padding: 5rem 0;
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Assts/background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #bannerCards {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 80%;
+    gap: 2rem;
+    width: 100%;
 }
 
 #banners img {
-    border: 0.1rem solid var(--White);
+    /* border: 0.1rem solid var(--White); */
     width: 600px;
     height: auto;
 }
+
+#tbanners img {
+    /* border: 0.1rem solid var(--White); */
+    width: 1200px;
+    height: auto;
+}
+
 
 #reviews {
     display: flex;
@@ -226,7 +252,7 @@ nav>ul {
     height: 100vh;
     overflow-x: hidden;
 
-    background-image: linear-gradient(rgba(0, 40, 130, 0.8), rgba(0, 0, 0, 0.5)), url("./Assts/Background5.jpg");
+    background-image: linear-gradient(rgba(0, 40, 130, 0.8), rgba(0, 0, 0, 0.5)), url("./Assts/background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -243,9 +269,9 @@ footer {
     justify-content: center;
     align-items: center;
     color: var(--White);
-    height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background3.jpg");
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -272,15 +298,6 @@ footer {
 
 
 @media only screen and (max-width: 1024px) {
-    #logoCards {
-        position: relative;
-        display: block;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        left: 30px;
-    }
-
     ::-webkit-scrollbar {
         width: 0.5rem;
     }
