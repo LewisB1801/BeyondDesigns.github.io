@@ -121,6 +121,7 @@ nav>ul {
     gap: 5rem;
     width: 100%;
     height: 100vh;
+
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -133,16 +134,19 @@ nav>ul {
     align-items: center;
     gap: 1rem;
     width: 80%;
-    max-width: 1000px; /* Added max-width to limit the container width */
-    margin: 0 auto; /* Added auto margin to center the container */
-  }
+    max-width: 1000px;
+    /* Added max-width to limit the container width */
+    margin: 0 auto;
+    /* Added auto margin to center the container */
+}
 
 #logoCards img {
     /* border: 0.1rem solid var(--White); */
-    width: calc(20% - 0.4rem); /* Adjusted width to occupy 20% of the container */
+    width: calc(20% - 0.4rem);
+    /* Adjusted width to occupy 20% of the container */
     height: auto;
-  }
-  
+}
+
 
 #banners {
     padding: 5rem 0;

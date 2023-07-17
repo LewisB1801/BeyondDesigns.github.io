@@ -88,7 +88,8 @@ h3 {
     margin: 10px 0;
 }
 
-#Intro, #Font p {
+#Intro,
+#Font p {
     font-size: 24;
     font-weight: 400;
     position: relative;
@@ -213,9 +214,9 @@ footer {
 
 
 
-@media (max-width: 767px) { 
-    nav{
-        display:none;
+@media (max-width: 767px) {
+    nav {
+        display: none;
     }
 
     main {
@@ -247,7 +248,7 @@ footer {
         position: relative;
         top: 20px;
     }
-    
+
     .Black ion-icon {
         position: relative;
         top: 20px;
@@ -267,7 +268,7 @@ footer {
     .Wrapper p {
         margin: 20px 0;
     }
-    
+
     #Marker img {
         margin-bottom: 40px;
     }
