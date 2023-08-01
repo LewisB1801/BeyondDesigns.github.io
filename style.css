@@ -100,7 +100,7 @@ nav {
     gap: 5rem;
 }
 
-nav>ul {
+nav > ul {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -118,10 +118,9 @@ nav>ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 10rem;
     width: 100%;
-    height: 100vh;
-
+    min-height: 100vh; /* Changed height to min-height */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,29 +134,24 @@ nav>ul {
     gap: 1rem;
     width: 80%;
     max-width: 1000px;
-    /* Added max-width to limit the container width */
     margin: 0 auto;
-    /* Added auto margin to center the container */
 }
 
 #logoCards img {
-    /* border: 0.1rem solid var(--White); */
     width: calc(20% - 0.4rem);
-    /* Adjusted width to occupy 20% of the container */
     height: auto;
 }
-
 
 #banners {
     padding: 5rem 0;
     display: flex;
-    gap: 5rem;
     flex-direction: column;
+    gap: 5rem;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed height to min-height */
     justify-content: center;
     align-items: center;
-
+    overflow-x: hidden; /* Prevent horizontal scroll */
     background-image: linear-gradient(rgba(0, 40, 130, 0.8), rgba(0, 0, 0, 0.5)), url("./Assts/background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,13 +160,13 @@ nav>ul {
 #tbanners {
     padding: 5rem 0;
     display: flex;
-    gap: 5rem;
     flex-direction: column;
+    gap: 5rem;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed height to min-height */
     justify-content: center;
     align-items: center;
-
+    overflow-x: hidden; /* Prevent horizontal scroll */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Assts/background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,21 +176,22 @@ nav>ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    justify-content: center;
     align-items: center;
     gap: 2rem;
     width: 100%;
+    max-width: 1200px; /* Added max-width to limit the container width */
+    margin: 0 auto; /* Center the container using auto margin */
 }
 
-#banners img {
-    /* border: 0.1rem solid var(--White); */
-    width: 600px;
-    height: auto;
+#bannerCards a {
+    width: 100%; /* Set the width of <a> to 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#tbanners img {
-    /* border: 0.1rem solid var(--White); */
-    width: 1200px;
+#bannerCards img {
+    max-width: 100%; /* Set maximum image width to 100% */
     height: auto;
 }
 
@@ -207,8 +202,9 @@ nav>ul {
     gap: 5rem;
     text-align: center;
     width: 100%;
-    height: 100vh;
-
+    min-height: 100vh; /* Changed height to min-height */
+    padding: 5rem 0; /* Added padding to separate content from edges */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,10 +216,11 @@ nav>ul {
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%; /* Added width to occupy full container width */
 }
 
 .testimonial {
-    width: 300px;
+    flex: 0 0 300px; /* Changed width to be flexible based on container width */
     padding: 1rem;
     border: 0.1rem solid var(--White);
     border-radius: 40px;
@@ -247,26 +244,20 @@ nav>ul {
     font-style: italic;
 }
 
-
 #business {
     display: flex;
     flex-direction: column;
     gap: 5rem;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed height to min-height */
+    padding: 5rem 0; /* Added padding to separate content from edges */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
     overflow-x: hidden;
-
     background-image: linear-gradient(rgba(0, 40, 130, 0.8), rgba(0, 0, 0, 0.5)), url("./Assts/background4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-
-
-
-
 
 footer {
     display: flex;
@@ -275,7 +266,7 @@ footer {
     align-items: center;
     color: var(--White);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed height to min-height */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 40, 130, 0.8)), url("./Assts/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -301,6 +292,20 @@ footer {
     margin-top: 1.5rem;
 }
 
+/* Media Query for larger screens */
+@media only screen and (min-width: 768px) {
+    #bannerCards {
+        justify-content: space-between;
+    }
+
+    #bannerCards a {
+        width: calc(50% - 1rem); /* Calculate the width for two images with 1rem gap */
+    }
+
+    #bannerCards img {
+        width: calc(50% - 1rem); /* Calculate the width for two images with 1rem gap */
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     ::-webkit-scrollbar {
